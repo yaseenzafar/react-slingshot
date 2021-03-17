@@ -7,6 +7,7 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
+      - run: npm i
       - run: npm run lint
 
   test:
@@ -14,6 +15,7 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
+      - run: npm i
       - run: npm run test
 
   analyze:
@@ -21,6 +23,7 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
+      - run: npm i
       - run: npm audit
         
 # Orchestrate or schedule a set of jobs
